@@ -115,7 +115,7 @@ int parse_term(void) {
     case '%': next_token(); result %=parse_factor(); next_token(); break;
     case '&': next_token(); result &=parse_factor(); next_token(); break;
     case '>': next_token(); result >>=parse_factor(); next_token(); break;
-    case '<': next_token(); result >>=parse_factor(); next_token(); break;
+    case '<': next_token(); result <<=parse_factor(); next_token(); break;
     }
   }
   return result;
